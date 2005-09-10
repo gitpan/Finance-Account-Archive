@@ -1,0 +1,21 @@
+NAME
+    Finance::Account::Archive - Database support for account data
+
+SYNOPSIS
+      use Finance::Account::Archive;
+      my $archive = Finance::Account::Archive->new;
+      $archive->display_all_entries;
+      $archive->add_entry(name => "Checking", balance => 789.12);
+      my @entries = $archive->get_entries(name => "Savings");
+
+      $archive->run;
+
+DESCRIPTION
+    This module provides an interface to PostgreSQL/MySQL databases for
+    storing account/financial information. It uses the "finances" table
+    (so named by default), and provides the ability to run interactively
+    with the user, as well as query, insert, update, and delete
+    operations.
+
+AUTHOR
+    Jeff Pace <jpace@cpan.org>
